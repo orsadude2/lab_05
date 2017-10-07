@@ -2,23 +2,23 @@
 
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
-Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and concatenates a message using the arguments passed into the function:
-
-"The sum of 4 and 7 is 11."
-
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.
-
-// For TODO item, be sure to change it to say DONE when you have successfully completed the task*/
+// Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and concatenates a message using the arguments passed into the function:
 //
-// // TODO: Write your code here
-// function sum(a,b){ //eslint-disable-line
-//   var theSum = a + b;
-//   var message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
-//   return [theSum, message];
-// }
+// "The sum of 4 and 7 is 11."
 //
-// // TODO: Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+// Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.
+
+//For TODO item, be sure to change it to say DONE when you have successfully completed the task*/
+
+// TODO: Write your code here
+function sum(a,b){ //eslint-disable-line
+  var theSum = a + b;
+  var message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
+  return [theSum, message];
+}
+
+// TODO: Here is the test for sum(); uncomment it to run it
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -33,13 +33,13 @@ Test this function by hand in the console to get it working, and when you think 
 // TODO: Write your code here
 function multiply(a,b){ //eslint-disable-line
   var theProduct = a * b;
-  var message = 'The product of ' + a + ' and ' + b + ' is ' + theProduct + '.';
-  return [theProduct, message];
-
+  var productMessage = 'The product of ' + a + ' and ' + b + ' is ' + theProduct + '.';
+  return [theProduct,productMessage];
+  console.log(theProduct, productMessage);
 }
+
+//TODO: Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
-// TODO: Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -56,11 +56,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var addAB = sum(a,b)[0];
+  var addABandC = sum(addAB, c)[0];
+  var multAB = multiply(a,b)[0];
+  var multABandC = multiply(multAB,c)[0];
+  var element3 = a + ' and ' + b + ' and ' + c + ' sum to ' + addABandC + '.';
+  var element4 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multABandC + '.';
+  return[addABandC, multABandC, element3, element4];
+  // var sumAndMultiply = ((a + b) * c);
+  // var firstMess =
+  ;
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -75,11 +84,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // TODO: Write your code here
-var testArray = [2,3,4]; //eslint-disable-line
+// var testArray = [2,3,4]; //eslint-disable-line
+//
+// function sumArray(testArray){ //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
-
-}
+//}
 
 // TODO: Here is the test for sumArray(); uncomment it to run it
 // testSumArray(testArray);
@@ -97,11 +106,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+// function multiplyArray(testArray){ //eslint-disable-line
 
-}
+//}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+// testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
