@@ -84,14 +84,35 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // TODO: Write your code here
-// var testArray = [2,3,4]; //eslint-disable-line
+var testArray = [2,3,4]; //eslint-disable-line
 //
-// function sumArray(testArray){ //eslint-disable-line
+function sumArray(testArray){ //eslint-disable-line
+  var newA = testArray[0];
+  console.log('newA' , newA);
+  var newB = testArray[1];
+  console.log('newB' , newB);
 
-//}
+  var result = sum(newA,newB);
+  result = result[0];
+  console.log('result ', result);
+
+  var newC = testArray[2];
+  console.log('new c', newC);
+
+  var result2 = sum(newC, result);
+
+  result2 = result2[0];
+  console.log('result2', result2);
+  var element5 = newA + ',' + newB + ',' + newC + ' was passed in as an array of numbers, and ' + result2
++ ' is their sum.';
+  console.log('message', element5);
+
+  return[result2, element5];
+
+}
 
 // TODO: Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
